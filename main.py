@@ -34,11 +34,12 @@ def get_weather(city):
     
     # 5. Extract key info
     city_name = data["name"]
+    humidity = data["main"]["humidity"]
     temp = data["main"]["temp"]
     description = data["weather"][0]["description"]
     
     # 6. Print
-    print(f"In {city_name}, it is {temp}°C with {description}.")
+    print(f"In {city_name}, the temp is {temp}°C and the humidity is {humidity}% with {description}.")
 
 # Try it
 get_weather("Portland")
